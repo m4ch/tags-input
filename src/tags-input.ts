@@ -122,7 +122,8 @@ export class TagsInput {
         <label for="tagsInput_${this.fileInputName}">${this.options.elementLabel}</label>
         <div class="tags-container" id="tagsInput_${this.fileInputName}wrapper">
           <div class="tags-selected-wrapper">
-            ${this.selectedTags.map((tag: Tag): string => {
+            ${this.selectedTags
+              .map((tag: Tag): string => {
                 return `<div class="tag" data-tag-id="${tag.id}">
                 <span class="tag-text">${tag.label}</span>
                 <span class="tag-remove">X</span>
@@ -130,10 +131,10 @@ export class TagsInput {
               })
               .join('')}
           </div>
-          <input class="form-control" id="tagsInput_${this.fileInputName}" name="${this.fileInputName}" type="text">
-          <div class="" data-title="${
-              this.options.questionMarkHelpText
-            }">
+          <input class="form-control" id="tagsInput_${this.fileInputName}" name="${
+      this.fileInputName
+    }" type="text">
+          <div class="" data-title="${this.options.questionMarkHelpText}">
           </div>
         </div>
         <div class="Tags-available" id="available-tags">

@@ -10,5 +10,4 @@ describe('Module Actions', () => {
 
     expect(TagsInput).toBeTruthy();
   });
-
 });
